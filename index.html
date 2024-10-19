@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>MINI - Browser</title>
+</head>
+<body>
+    <div class="browser">
+        <header>
+            <div class="toolbar">
+                <button id="back-btn" title="Back">←</button>
+                <button id="forward-btn" title="Forward">→</button>
+                <input type="text" id="url-input" placeholder="Enter URL..." aria-label="URL input">
+                <button id="go-btn" title="Go">Go</button>
+            </div>
+            <div class="tabs">
+                <button class="tab active" data-url="https://example.com">Tab 1</button>
+                <button class="tab" data-url="https://example.org">Tab 2</button>
+                <button id="new-tab">+</button>
+            </div>
+        </header>
+        <iframe id="web-view" src="about:blank" seamless></iframe>
+    </div>
+
+    <!-- History Modal -->
+    <div id="history-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h2>Browsing History</h2>
+            <ul id="history-list"></ul>
+            <button id="close-history" class="modal-btn">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
