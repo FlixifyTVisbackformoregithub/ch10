@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.browser {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+}
+
+.toolbar {
+    display: flex;
+    padding: 10px;
+    background-color: #f1f1f1;
+}
+
+#url-input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    margin: 0 8px;
+    border-radius: 4px;
+}
+
+#go-btn, #back-btn, #forward-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+#go-btn:hover, #back-btn:hover, #forward-btn:hover {
+    background-color: #0056b3;
+}
+
+.tabs {
+    display: flex;
+    padding: 5px;
+    background-color: #e9e9e9;
+}
+
+.tab {
+    background-color: #ccc;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-right: 5px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.tab:hover {
+    background-color: #bbb;
+}
+
+.tab.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#iframe {
+    flex: 1;
+    border: none;
+}
+
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%; /* Change to your preferred width */
+    max-height: 80%;
+    overflow-y: scroll;
+    border-radius: 4px;
+}
+
+#history-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#history-list li {
+    cursor: pointer;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+#history-list li:hover {
+    background-color: #f1f1f1;
+}
+
+.modal-btn {
+    background-color: #f44336; /* Red color */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.modal-btn:hover {
+    background-color: #d32f2f; /* Darker red */
+}
